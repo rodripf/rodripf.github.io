@@ -71,6 +71,32 @@ section.recent-posts {
     margin-bottom: 27px;
 }
 
+.section-title h2 a{
+    border-left: 1px solid rgba(0, 0, 0, .125);
+    margin-left: 18px;
+    padding-left: 12px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 27px;
+}
+
+.section-title h1 {
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+    margin-bottom: 25px;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 27px;
+}
+
+.section-title h1 a{
+    border-left: 1px solid rgba(0, 0, 0, .125);
+    margin-left: 18px;
+    padding-left: 12px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 27px;
+}
+
 .section-title span {
     border-bottom: 1px solid rgba(0, 0, 0, .44);
     display: inline-block;
@@ -498,6 +524,7 @@ ul.tags {
 ul.tags li {
     display: inline-block;
     font-size: 0.9rem;
+    margin-top: 16px;
 }
 
 ul.tags li a {
