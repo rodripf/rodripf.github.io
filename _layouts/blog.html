@@ -1,0 +1,22 @@
+---
+title: "Blog"
+layout: default
+permalink: "/blog.html"
+---
+
+
+<div class="section-title ">
+<h1><span>Entradas del blog</span></h1>
+</div>
+<div class="row listrecent">
+{% assign pages_list = site.posts | where: "type", "blog" %}
+{% for post in pages_list %}
+{% if post.title != null %}
+{% if group == null or group == post.group %}
+{% include postbox.html %}
+{% endif %}
+{% endif %}
+{% endfor %}
+{% assign pages_list = nil %}
+{% assign group = nil %}
+</div>

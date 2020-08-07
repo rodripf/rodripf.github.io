@@ -9,53 +9,51 @@ title: Home
 ================================================== -->
 <section class="featured-posts">
     <div class="section-title">
-        <h2><span>Featured</span></h2>
+        <h2> <span>Principales Proyectos</span> <a href="projects">Ver Todos</a></h2>    
     </div>
     <div class="row">
 
-    {% for post in site.posts %}
+        {% assign featured = site.posts | where: "featured", "true" | where: "type", "project" %}
 
-        {% if post.featured == true %}
+        {% for post in featured %}        
 
-            {% include featuredbox.html %}
+            {% include featuredbox.html %}        
 
-        {% endif %}
-
-    {% endfor %}
+        {% endfor %}
 
     </div>
 </section>
 
 {% endif %}
 
-<!-- Posts Index
-================================================== -->
+
 <section class="recent-posts">
 
     <div class="section-title">
 
-        <h2><span>All Stories</span></h2>
+        <h2><span>Artículos del blog</span><a href="categories#blog">Ver Todos</a></h2>
 
     </div>
 
     <div class="row listrecent">
+        {% assign blog_posts = site.posts | where: "type", "blog" %}
 
-        {% for post in paginator.posts %}
+        {% for post in blog_posts limit: 4 %}
 
-        {% include postbox.html %}
+            {% include featuredbox.html %}
 
         {% endfor %}
-
     </div>
 
 </section>
 
+
 <!-- Pagination
 ================================================== -->
-<div class="bottompagination">
+<!--div class="bottompagination">
 <div class="pointerup"><i class="fa fa-caret-up"></i></div>
 <span class="navigation" role="navigation">
     {% include pagination.html %}
 </span>
-</div>
+</div-->
 
