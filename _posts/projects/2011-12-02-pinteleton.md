@@ -6,7 +6,7 @@ type: project
 permalink: /project/pinteleton/
 image: assets/images/2013/07/PintTeleton-150x150.png
 category:
-  - Apps Facebook
+  - App Facebook
   - Teletón
 tags: [php, js]
 ---
