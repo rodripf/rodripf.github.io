@@ -1,0 +1,44 @@
+---
+title: "Projects"
+layout: default
+permalink: "/projects.html"
+---
+<div class="section-title">
+	<h1><span>Todos los proyectos</span> <a href="projects">por fecha</a><a>por categoría</a></h1>
+</div>
+<div class="after-post-cats">
+    <ul class="tags mb-4">
+        {% assign sortedCategories = site.categories | sort %}
+        {% for category in sortedCategories %}
+        	{% assign pages_list = category[1] | where: "type","project" %}
+			{% if pages_list.size > 0 %}
+	        <li>
+
+	                <a class="smoothscroll" href="{{site.baseurl}}/projects_by_category#{{ category[0] | replace: " ","-" }}">{{ category[0] }}</a>
+
+	        </li>
+        	{% endif %}
+
+        {% endfor %}
+    </ul>
+</div>
+<div class="row listrecent">
+{% for category in site.categories %}
+	{% assign pages_list = category[1] | where: "type","project" %}
+	{% if pages_list.size > 0 %}
+		<div class="section-title col-md-12 mt-4">
+		<h2 id="{{ category[0] | replace: " ","-" }}"><span class="text-capitalize">{{ category[0] }}</span></h2>
+		</div>
+		{% for post in pages_list %}
+			{% if post.title != null %}
+				{% if group == null or group == post.group %}
+					{% include postbox.html %}
+				{% endif %}
+			{% endif %}
+		{% endfor %}
+	{% endif %}
+		
+	{% assign pages_list = nil %}
+	{% assign group = nil %}
+{% endfor %}
+</div>

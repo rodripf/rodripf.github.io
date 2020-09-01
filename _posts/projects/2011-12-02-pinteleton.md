@@ -7,8 +7,8 @@ permalink: /project/pinteleton/
 image: assets/images/2013/07/PintTeleton-150x150.png
 category:
   - App Facebook
-  - Teletón
-tags: [php, js]
+  - Web
+tags: [php, js, teletón]
 ---
 **PinTeletón** es una aplicación para **Facebook** desarrollada para la campaña de [Fundación Teletón]("http://www.teleton.org.uy) 2011. Permite al usuario elegir y colocarse de forma rápida un pin de Teletón en su foto de perfil.
 

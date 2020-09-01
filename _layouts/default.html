@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<link rel="icon" href="{{ site.baseurl }}/assets/images/logo.png">
+<link rel="icon" href="{{ site.baseurl }}/assets/images/logo.jpf">
 
 <title>{{ page.title }} | {{site.name}}</title>
 
@@ -71,12 +71,20 @@ ga('send', 'pageview');
                 <a class="nav-link" href="{{ site.baseurl }}/index">Home</a>
                 </li>
 
-                {% if page.url == "/projects" or page.url == "/projectsd" %}
+                {% if page.url == "/projects" or page.url == "/projectsc" %}
                 <li class="nav-item active">
                 {% else %}
                 <li class="nav-item">
                 {% endif %}
                 <a class="nav-link" href="{{ site.baseurl }}/projects">Proyectos</a>
+                </li>
+
+                 {% if page.url == "/data-science-projects" %}
+                <li class="nav-item active">
+                {% else %}
+                <li class="nav-item">
+                {% endif %}
+                <a class="nav-link" href="{{ site.baseurl }}/data-science-projects">Data Science</a>
                 </li>
 
                 {% if page.url == "/blog" %}
