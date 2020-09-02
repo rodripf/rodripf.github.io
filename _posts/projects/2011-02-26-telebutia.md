@@ -1,7 +1,6 @@
 ---
 title: Telebutiá
 type: project
-featured: true
 layout: post
 permalink: /project/telebutia/
 image: assets/images/2013/09/Telebutia-150x150.png

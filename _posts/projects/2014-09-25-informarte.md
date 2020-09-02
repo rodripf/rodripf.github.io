@@ -4,7 +4,6 @@ excerpt: Actualización de página y sistema para diario digital
 layout: post
 type: project
 permalink: /project/informarte/
-featured: true
 image: assets/images/2014/09/Informarte-300x213.png
 category: Web
 tags: [php, wordpress]

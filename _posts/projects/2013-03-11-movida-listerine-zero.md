@@ -3,7 +3,9 @@ title: Movida Listerine Zero
 excerpt: Juego de baile para acción publicitaria
 layout: post
 type: project
+featured: true
 permalink: /project/movida-listerine-zero/
+image: assets/images/2013/06/MovidaListerineZeroR-1024x772.jpg
 category: [Acción Publicitaria, Computer Vision]
 tags: [kinect, unity]
 ---

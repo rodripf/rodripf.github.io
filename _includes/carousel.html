@@ -1,0 +1,27 @@
+<!-- begin carousel -->
+<div class="carousel slide" data-ride="carousel" data-interval="3500">
+    <div class="carousel-inner">
+    
+    {% assign first = true %}
+
+    {% for post in carousel %}        
+
+        {% if first %}
+            <div class="carousel-item active">
+            {% assign first = false %}
+        {% else %}
+            <div class="carousel-item">
+        {% endif %}
+
+        <a class="text-dark" href="{{ site.baseurl }}{{ post.url }}">
+            <img src="{{ post.image }}" alt="{{ post.title }}">
+        </a>
+          <div class="carousel-caption d-none d-md-block">
+            <h5><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h5>
+            <p>{{ post.excerpt }}</p>
+          </div>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+<!-- end carousel -->

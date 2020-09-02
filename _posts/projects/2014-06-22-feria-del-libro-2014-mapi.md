@@ -5,7 +5,6 @@ layout: post
 type: project
 permalink: /project/feria-del-libro-2014-mapi/
 image: assets/images/2014/06/mapi-150x150.png
-carousel: true
 skill: [Augmented Reality]
 tags: [unity, mobile]
 ---
