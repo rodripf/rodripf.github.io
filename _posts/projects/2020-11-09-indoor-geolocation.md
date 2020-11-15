@@ -5,7 +5,7 @@ layout: post
 toc: true
 type: project
 subtype: ds
-carousel: true
+carousel: false
 featured: true
 image: assets/images/2020/11/indoor_gps.jpg
 permalink: /project/indoor-geolocation/
@@ -42,7 +42,7 @@ Es posible entrenar un modelo con distintas ubicaciones en el edificio y en cada
 
 ## Entendiendo los datos
 
-### Obtnción de los datos
+### Obtención de los datos
 
 Para validar la tesis, el presente proyecto se propone la realización del siguiente experimento, que a escala más pequeña será equivalente a lo que puede ser realizado en una gran superficie:
 
@@ -68,14 +68,16 @@ La tabla de datos obtenidos por WiFiAnalyzer tiene la siguiente estructura:
 | Distance	 					| Distancia al dispositivo estidmada por WiFiAnalyzer   |
 | 802.11mc 						| Soporte para esta versión del estándar				|
 | Security	 					| Protocolo de seguridad implementado en la red.		|
+{: .table }
 
 Además se confeccionó la siguiente tabla para identificar el lugar donde fue tomada cada medida:
+
 | *Feature* 					|  Descripción 											|
 |-------------------------------|-------------------------------------------------------|
 | ROOM							| Habitación en la que se toman las medidas	 			|
 | Timestamp Inicio				| Fecha de inicio de las mediciones en la habitación.	|
 | Timestamp Finance				| Fecha de fin de las mediciones en la habitación.		|
-
+{: .table}
 
 
 ## Preparando los datos
@@ -129,6 +131,7 @@ La exactitud en las predicciones obtenidos con los parámetros por defecto propo
 | Gradient Boosted tree         | 83.33% 									 			|
 | Naive Bayes	  				| 89.29%												|
 | kNN			  				| 81.19%												|
+{: .table}
 
 El resultado obtenido con Naive Bayes es considerablemente superior, por lo que sería el algoritmo que se preferiría en caso de hacer un deploy. Naive Bayes es además una buena elección ya que escala bien en casos de gran cantidad de features[^5]. Cada red detectada en nuestro caso es una nueva feature, por lo tanto es esencial que el modelo elegido escale en este sentido,
 
