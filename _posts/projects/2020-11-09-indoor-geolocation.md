@@ -103,14 +103,6 @@ Esta metodología implica entonces una columna por cada red detectada, lo que ha
 ### Missing values
 En cada medición solo se detecta un subconjunto del total de las redes, ya que hay puntos del apartamento donde no llegan todas. En la transfromación anterior se generaron por esta causa muchos valores faltantes, en las columnas en que la medición no detecto la correspondiente red. Para este problema se va a computar el no haber detectado la red como una fuerza de señal 0, por lo que se utiliza el componente Replace Missing Values para reemplazar por 0 los valores faltantes.
 
-
-### Diferenciación y normalización
-El precio de los *assets*, por lo general, muestra una tendencia alcista, desde números muy pequeños al inicio a números muy altos al final, lo que dificulta el estudio de estacionalidades.
-
-Para evitar este problema, se estudiará el valor diferencial, lo que permitirá ver la velocidad de crecimiento y no el crecimiento en sí. Para realizar esta operación se utilizará el bloque *Differentiate* del paquete TimeSeries de *RapidMiner* y se agregarán dos columnas: una con la variación neta en el precio y otra con un porcentaje, indicando la variación relativa, siempre con respecto al día anterior.
-
-![Tabla de datos luego del preprocesamiento](/assets/images/2020/11/data.jpg)
-
 ## Modelado
 
 Para este proyecto y para simplificar el análisis se tratará el problema como uno de clasificación, lo que permitirá identificar en qué habitación se encuentra un usuario.
