@@ -120,16 +120,63 @@ Se extrae de la fecha los siguientes datos que usualmente participan en la estac
 
 ![Preprocesamiento de los datos](/assets/images/2020/8/rm_01_data_preprocessing.jpg)
 
+### Ventanas
+Cada día (fila) de los datos obtenidos no es un sample independiente, sino que guarda una estrecha relación con lo sucedido en días anteriores. Para que al alimentar el modelo esta información sea tenida en cuenta será necesario agregar a cada sample la información de los días anteriores como features nuevos.
+Este procedimiento está previsto en RapidMiner y se logra utilizando el bloque Windowing. De esta forma, para cada fila se agreaga información de las filas anteriores.
+
+El bloque Windowing agrega además una nueva columna, "horizon", a partir de nuestra anterior columna objetivo "avg", que será la columna objetivo a predecir. Este valor corresponde al "valor de mañana" y servirá para entrenar al modelo a predecir valores futuros.
+
+Es decir, el modelo será capaz de, teniendo todos los valores de los indicadores correspondientes a hoy y a los días previos, poder predecir el valor del cambio en el precio promedio para el día de mañana.  
+
 ## Modelado
+### Reducción de predictores
+Será hecho un análisis de componentes principales para reducir la cantidad de predictores, que luego de la operación de ventanas, quedó en un número muy elevado: 3622. De esta forma los modelos podrán entrenarse de forma más rápida y se podrá hacer un acercamiento más veloz a la exactitud que se pueda obtener.
+
+Tras ejecutar el análisis de componentes principales, la cantidad de predictores se redujo a 95.
+
+### Métodos tradicionales
+
+La literatura sobre el tema habla de que los métodos tradicionales de predicción no obtienen buenos resultados debido a la irregularidad casi que aleatoria que gobierna los mercados. Sin embargo, como primer acercamiento se decide utilizar Random Forest, Decision Tree y Generalized Linear Model. La exactitud obtenida se muestra a continuación:
+
+
+### Redes neuronales recurrente
+
+Para la predicción de series temporales, la literatura recomienda la utilización de Redes neuronales recurrentes[^5]. En particular las llamadas redes Long Short-Term Memory (LSTM).
+
+Las redes LSTM se especializan en crear dependencias entre los datos de entrenamiento, de forma que por ejemplo, en una serie temporal, cada dato de entrenamiento posterior tiene una relación especial con los previamente entrenados. De esta forma la información de un día tiene mantiene estrechas relaciones con la de los días anteriores, por lo que el entrenamiento y la predicción tendrá esto en cuenta[^6].
+
+Para integrar LSTM se utilizará la extensión de RapidMiner "Redes Neuronales", que permite la creación de una red LSTM.
+
+![Proceso con redes neuronales](/assets/images/2020/11/neuronal_1.jpg)
+![Red neuronal](/assets/images/2020/11/neuronal_2.jpg)
+
 
 ## Evaluación
 
-## Despliegue
+El entrenamiento y posterior evaluación de los modelos mencionados arrojó las siguientes medidas de exactitud:
+
+| Modelo						|  Error Relativo										|
+|-------------------------------|-------------------------------------------------------|
+| Decision Tree 				| 86%													|
+| Random Forest					| 97%													|
+| Generalized Linear Model		| 82%													|
+| LSTM 							| 77%													|
+{: .table }
+
+Se observa experimentalmente que el desempeño de los modelos tradicionales es de mala calidad, induciendo a un error muy grande.
+Con el modelo LSTM se logró una mejora interesante, pero aún sigue siendo muy insuficiente para lograr un sistema confiable.
+
 
 ## Conclusión
+
+Se comprobó que pese a la mejora llevada a cabo por las redes neuronales, es extremadamente dificil predecir el movimiento de la bolsa de valores. Sin embargo el presente proyecto sirvió para integrar los diferentes pasos del análisis y desarrollo de sistema de machine learning y su necesario preprocesamiento de datos.
+
+Se considera además que la red LSTM podría continuar siendo modificada para lograr mejores resultados, modificando la cantidad y configuración de las capas, y la cantidad de neuronas en cada una.
 
 ## Referencias
 [^1]: [Automated trading systems - Wikipedia](https://en.wikipedia.org/wiki/Automated_trading_system)
 [^2]: [Inteligencia artificial capaz de predecir movimientos en la bolsa con 79% de fiabilidad](https://www.elblogsalmon.com/mercados-financieros/inteligencia-artificial-capaz-predecir-movimientos-bolsa-79-fiabilidad)
 [^3]: [Can artificial intelligence beat the stock market?](https://www.fastcompany.com/90502428/artificial-intelligence-beat-the-stock-market)
 [^4]: [Oscilador Estocástico - Wikipedia](https://es.wikipedia.org/wiki/Oscilador_estoc%C3%A1stico)
+[^5]: [Time Series Prediction with LSTM Recurrent Neural Networks](https://machinelearningmastery.com/time-series-prediction-lstm-recurrent-neural-networks-python-keras/)
+[^6]: [Understanding LSTM Networks](https://colah.github.io/posts/2015-08-Understanding-LSTMs/#:~:text=Long%20Short%20Term%20Memory%20networks,many%20people%20in%20following%20work.)
