@@ -33,9 +33,9 @@ Además soy fotógrafo amateur y karateka.
 
 <h5>Mis perfiles online</h5>
 
-<p><a href="https://uy.linkedin.com/in/rodrigo-p%C3%A9rez-fulloni-a23a339a"><i class="fab fa-github"></i> LinkedIn</a></p>
-<p><a href="https://github.com/rodripf"><i class="fab fa-linkedin"></i> Github</a></p>
-<p><a href="https://www.flickr.com/photos/rodripf/"><i class="fab fa-linkedin"></i> Flickr</a></p>
+<p><a href="https://uy.linkedin.com/in/rodrigo-p%C3%A9rez-fulloni-a23a339a"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
+<p><a href="https://github.com/rodripf"><i class="fab fa-github"></i> Github</a></p>
+<p><a href="https://www.flickr.com/photos/rodripf/"><i class="fab fa-flickr"></i> Flickr</a></p>
 <p><a href="https://twitter.com/rodri_pf"><i class="fab fa-twitter"></i> Twitter</a></p>
 <p><a href="https://www.youtube.com/user/rodripf/featured"><i class="fab fa-youtube"></i> YouTube</a></p>
 
