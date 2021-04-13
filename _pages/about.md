@@ -14,7 +14,7 @@ Soy un <b>apasionado de la informática</b>, los <b>avances científicos</b> y l
 Si hay un nuevo lenguaje de programación o un nuevo paradigma, quiero probarlo! Esa es la razón de mi variado portfolio de proyectos.
 </p>
 <p>
-Tengo el título de <b>Analista en Informática</b> y trabajo como <b>Software Engineer</b> en Evertec Inc.
+Tengo el título de <b>Analista en Informática</b> y trabajo como <b>Lead Software Engineer</b> en <a href="https://www.southworks.com/" target="_blank">SOUTHWORKS</a>, making everything right.
 </p>
 <p>
 Soy un incansable <b>emprendedor</b>, siempre tengo algún side project en la vuelta.
