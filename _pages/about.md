@@ -14,7 +14,7 @@ Soy un <b>apasionado de la informática</b>, los <b>avances científicos</b> y l
 Si hay un nuevo lenguaje de programación o un nuevo paradigma, quiero probarlo! Esa es la razón de mi variado portfolio de proyectos.
 </p>
 <p>
-Tengo el título de <b>Analista en Informática</b> y trabajo como <b>Lead Software Engineer</b> en <a href="https://www.southworks.com/" target="_blank">SOUTHWORKS</a>, making everything right.
+Tengo el título de <b>Ingeniero en Computación</b> y trabajo como <b>Senior Software Engineer</b> en <a href="https://www.mercadolibre.com/" target="_blank">MercadoLibre</a>, democratizando el comercio electrónico.
 </p>
 <p>
 Soy un incansable <b>emprendedor</b>, siempre tengo algún side project en la vuelta.
