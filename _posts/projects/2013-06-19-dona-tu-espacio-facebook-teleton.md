@@ -5,7 +5,7 @@ layout: post
 type: project
 permalink: /project/dona-tu-espacio-facebook-teleton/
 image: assets/images/2013/06/DonaTuEspacioR-150x150.jpg
-category: [App Facebook, Web]
+category: [App Facebook, Web, Acción Publicitaria]
 tags: [php, js, teletón]
 ---
 Para la campaña de la [Fundación Teletón Uruguay](http://www.teleton.org.uy) 2012, junto con la agencia [Corporación JWT](https://www.jwt.com.uy) y el área de comunicación de Teletón, desarrollé la aplicación para Facebook «Doná tu espacio», que permitía a los usuarios donar espacio en su portada para ayudar a difundir las historias de los niños teletón de ese año.

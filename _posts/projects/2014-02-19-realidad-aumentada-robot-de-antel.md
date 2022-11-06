@@ -5,7 +5,7 @@ layout: post
 type: project
 permalink: /project/realidad-aumentada-robot-de-antel/
 image: assets/images/2014/02/ar-150x150.png
-category: [Augmented Reality, Computer Vision]
+category: [Augmented Reality, Computer Vision, Acción Publicitaria]
 tags: [unity, opencv]
 ---
 Proyecto de Realidad Aumentada realizado para promocionar el Samsung Galaxy S3 en el Espacio Avanza, lugar donde ANTEL permite probar sus equipos, en la Torre de las Telecomunicaciones.
