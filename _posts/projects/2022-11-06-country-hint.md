@@ -55,8 +55,8 @@ pistas para cada país. Para verlas todas ¡hay que jugar!
 
 ## El juego
 
-Ya con las pistas generadas de forma cuasi mágica, toca diseñar el juego. Momento de pulir las habilidades de *
-frontend y game developer*! Decidimos con Caro que fueran 3 las variables que gobiernan el juego:
+Ya con las pistas generadas de forma cuasi mágica, toca diseñar el juego. Momento de pulir las habilidades de 
+*frontend y game developer*! Decidimos con Caro que fueran 3 las variables que gobiernan el juego:
 
 - Tiempo: se disponen de 5 minutos para adivinar.
 - Pistas: se van mostrando de a una, a demanda del jugador y son hasta 5.
